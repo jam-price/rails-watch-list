@@ -11,12 +11,12 @@
   <div class="card-product">
     <% img_url = "https://image.tmdb.org/t/p/w500#{bookmark.movie.poster_url}" %>
     <%= image_tag img_url %>
-    <div>
-        <h2><%= bookmark.movie.title %></h2>
+    <div class="p-3">
+        <h2 class="pt-2"><%= bookmark.movie.title %></h2>
         <p><%= bookmark.movie.overview %></p>
         <p><em> <%= bookmark.comment %></em> </p>
     </div>
-    <%= link_to 'Delete Movie', bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-primary"  %>
+    <%= link_to 'Delete Movie', bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-primary mx-3"  %>
   </div>
 <% end %>
 
