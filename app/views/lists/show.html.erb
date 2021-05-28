@@ -12,6 +12,6 @@
     <%= link_to 'Delete Movie', bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?"}  %>
 <% end %>
 <div>
-    <%= link_to 'Back to Lists', lists_path  %>
+    <%= link_to 'Back to Lists', root_path  %>
     <%= link_to 'Add a Movie', new_list_bookmark_path(@list)  %>
 </div>
