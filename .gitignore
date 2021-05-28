@@ -37,3 +37,6 @@ yarn-debug.log*
 
 # ignore old git file
 .git-old
+
+# ignore env file
+.env*
