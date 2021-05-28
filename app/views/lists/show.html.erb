@@ -2,11 +2,16 @@
     <%= @list.name %>
 </h2>
 
+
 <% @list.bookmarks.each do |bookmark| %>
+<% img_url = "https://image.tmdb.org/t/p/w500#{bookmark.movie.poster_url}" %>
+    <%= image_tag img_url %>
     <h3><%= bookmark.movie.title %></h3>
-    <p><%= bookmark.comment %> </p>
+    <p><%= bookmark.movie.overview %></p>
+    <p><em> <%= bookmark.comment %></em> </p>
     <%= link_to 'Delete Movie', bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?"}  %>
 <% end %>
-
-<%= link_to 'Back to Lists', lists_path  %>
-<%= link_to 'Add a Movie', new_list_bookmark_path(@list)  %>
+<div>
+    <%= link_to 'Back to Lists', lists_path  %>
+    <%= link_to 'Add a Movie', new_list_bookmark_path(@list)  %>
+</div>
