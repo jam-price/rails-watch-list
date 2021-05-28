@@ -10,3 +10,15 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar a {
+  color: $purple
+}
+
+.navbar .btn a {
+  transition: 1s;
+}
+
+.navbar .btn:hover a {
+  color: white;
+}
